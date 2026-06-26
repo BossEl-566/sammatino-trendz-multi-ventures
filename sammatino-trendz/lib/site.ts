@@ -1,0 +1,25 @@
+export const siteConfig = {
+  name: "Sammatino Trendz Multi-Ventures",
+  shortName: "Sammatino Trendz",
+  tagline: "Your One-Stop Shop for Quality Goods & Instant Connectivity.",
+  description:
+    "Sammatino Trendz Multi-Ventures is a modern retail, e-commerce, and telecommunications business offering quality household products, accessories, electronics, airtime, data bundles, and digital services.",
+  established: "2025",
+  founder: "Gbli-Yawson Sammatino Samuel",
+  address: "Dodowa – Obom Street, GO-0005-0535",
+  phone: "0241127631",
+  whatsapp: "0241127631",
+  email: "sammatinotrendz@gmail.com",
+  industry: "Retail, E-commerce & Telecommunications",
+  keywords: [
+    "Sammatino Trendz",
+    "Sammatino Trendz Multi-Ventures",
+    "Ghana ecommerce",
+    "Dodowa online shop",
+    "data bundles Ghana",
+    "airtime top up",
+    "home appliances Ghana",
+    "phone accessories Ghana",
+    "electronics Ghana",
+  ],
+};
