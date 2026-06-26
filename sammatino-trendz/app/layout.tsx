@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
 import { AppProviders } from "@/components/providers/app-providers";
+import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 import { siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
@@ -49,7 +52,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >
-        <AppProviders>{children}</AppProviders>
+        <AppProviders>
+          <div className="flex min-h-screen flex-col">
+            <SiteHeader />
+            <div className="flex-1">{children}</div>
+            <SiteFooter />
+          </div>
+
+          <WhatsAppButton />
+        </AppProviders>
       </body>
     </html>
   );
