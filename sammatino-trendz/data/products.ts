@@ -188,3 +188,22 @@ export const featuredProducts = products.filter((product) => product.isFeatured)
 export const saleProducts = products.filter((product) => product.isOnSale);
 
 export const newProducts = products.filter((product) => product.isNew);
+
+export function getProductBySlug(slug: string) {
+  return products.find((product) => product.slug === slug);
+}
+
+export function getRelatedProducts(slug: string, limit = 3) {
+  const currentProduct = getProductBySlug(slug);
+
+  if (!currentProduct) {
+    return [];
+  }
+
+  return products
+    .filter(
+      (product) =>
+        product.slug !== slug && product.category === currentProduct.category
+    )
+    .slice(0, limit);
+}
